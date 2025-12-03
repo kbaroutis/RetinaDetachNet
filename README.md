@@ -27,14 +27,14 @@ Download and install Miniconda from: https://docs.conda.io/en/latest/miniconda.h
 
 **macOS/Linux:**
 ```bash
-git clone https://github.com/kostasbaroutis/RetinaDetachNet.git
+git clone https://github.com/kbaroutis/RetinaDetachNet.git
 cd RetinaDetachNet
 ./install.sh
 ```
 
 **Windows:**
 ```bash
-git clone https://github.com/kostasbaroutis/RetinaDetachNet.git
+git clone https://github.com/kbaroutis/RetinaDetachNet.git
 cd RetinaDetachNet
 install.bat
 ```
@@ -176,4 +176,4 @@ If you use RetinaDetachNet in your research, please cite:
 ## Support
 
 For issues and questions, please open an issue on GitHub:
-https://github.com/kostasbaroutis/RetinaDetachNet/issues
+https://github.com/kbaroutis/RetinaDetachNet/issues
