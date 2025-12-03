@@ -13,35 +13,17 @@ A deep learning-based tool for quantifying apoptotic cells (TUNEL+) and nuclei d
 - **Dual-Channel Analysis**: Processes paired Nuclei (DAPI) and TUNEL fluorescence images
 - **Configurable Parameters**: Adjust thresholds, area filters, and overlap criteria via GUI
 - **Comprehensive Output**: Generates visualizations and quantitative CSV results
-- **Cross-Platform**: Works on macOS (Intel & Apple Silicon), Linux, and Windows
-- **GPU Acceleration**: Automatic GPU support (NVIDIA CUDA, Apple Metal MPS)
+- **Cross-Platform**: Works on macOS, Linux, and Windows
 
 ---
 
-## Quick Start
+## Quick Start (5 minutes)
 
-### Step 1: Install Miniforge (recommended) or Miniconda
+### Step 1: Install Miniconda (one time)
 
-**Miniforge** is recommended (avoids Anaconda licensing issues, includes `mamba` for faster installs):
+Download and install Miniconda from: https://docs.conda.io/en/latest/miniconda.html
 
-| Platform | Download |
-|----------|----------|
-| **macOS (Apple Silicon M1/M2/M3)** | [Miniforge3-MacOSX-arm64](https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-MacOSX-arm64.sh) |
-| **macOS (Intel)** | [Miniforge3-MacOSX-x86_64](https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-MacOSX-x86_64.sh) |
-| **Linux** | [Miniforge3-Linux-x86_64](https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh) |
-| **Windows** | [Miniforge3-Windows-x86_64](https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Windows-x86_64.exe) |
-
-**macOS/Linux installation:**
-```bash
-# Download and run installer (example for Apple Silicon)
-curl -L -O https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-MacOSX-arm64.sh
-bash Miniforge3-MacOSX-arm64.sh
-# Restart terminal after installation
-```
-
-Alternative: [Miniconda](https://docs.conda.io/en/latest/miniconda.html)
-
-### Step 2: Clone and Install RetinaDetachNet
+### Step 2: Clone and Install RetinaDetachNet (one time)
 
 **macOS/Linux:**
 ```bash
@@ -57,13 +39,7 @@ cd RetinaDetachNet
 install.bat
 ```
 
-The installer will:
-- Detect your system (macOS Intel/Apple Silicon, Linux, Windows)
-- Create an isolated `retinadetachnet` conda environment
-- Install all dependencies from `environment.yml`
-- Configure GPU acceleration if available
-
-### Step 3: Run the Application
+### Step 3: Run the Program
 
 ```bash
 conda activate retinadetachnet
@@ -72,19 +48,11 @@ python RetinaDetachNet.py
 
 A window will open. Select your Nuclei and TUNEL folders and click "Run Analysis".
 
----
-
-## Updating
+### Updating to Latest Version
 
 ```bash
 cd RetinaDetachNet
 git pull
-```
-
-If dependencies changed:
-```bash
-conda activate retinadetachnet
-conda env update -f environment.yml
 ```
 
 ---
@@ -164,20 +132,17 @@ your_data/
 
 ## System Requirements
 
-- **Python**: 3.10 (automatically installed)
+- **Python**: 3.10 recommended
 - **RAM**: 8 GB minimum, 16 GB recommended
-- **GPU**: Optional but recommended
-  - NVIDIA: CUDA support via PyTorch
-  - Apple Silicon: Metal Performance Shaders (MPS) - automatic
-- **Storage**: ~500 MB for installation
-- **OS**: macOS 12+, Windows 10+, Linux (Ubuntu 20.04+)
+- **GPU**: Optional (CUDA for NVIDIA, MPS for Apple Silicon)
+- **Storage**: ~200 MB for installation
 
 ---
 
 ## Troubleshooting
 
 ### "Model configuration not found"
-Ensure the `models/` folder contains `config.json` and `model_weights.pth`. Run `git pull` to update.
+Ensure the `models/` folder contains `config.json` and `model_weights.pth`. Try `git pull` to update.
 
 ### "No files processed"
 Check that:
@@ -186,34 +151,9 @@ Check that:
 3. Images contain valid data (not empty)
 
 ### Slow processing
-- First run downloads StarDist model (~50 MB) - subsequent runs are faster
-- GPU acceleration is automatic on supported hardware
+- Processing uses GPU acceleration when available (CUDA/MPS)
+- First run downloads StarDist model (~50 MB)
 - Large images take longer; consider downsizing if needed
-
-### Environment issues
-```bash
-# Remove and recreate environment
-conda env remove -n retinadetachnet
-./install.sh  # or install.bat on Windows
-```
-
-### Apple Silicon specific
-The installer automatically configures TensorFlow Metal for GPU acceleration on M1/M2/M3 Macs.
-
----
-
-## Dependencies
-
-Core packages (automatically installed via `environment.yml`):
-
-| Package | Purpose |
-|---------|---------|
-| stardist | Cell segmentation |
-| tensorflow | Deep learning backend |
-| pytorch | U-Net ONL segmentation |
-| segmentation-models-pytorch | U-Net architecture |
-| scikit-image | Image processing |
-| customtkinter | GUI framework |
 
 ---
 
