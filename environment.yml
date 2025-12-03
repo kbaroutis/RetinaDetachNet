@@ -1,0 +1,42 @@
+# RetinaDetachNet Conda Environment
+# Install with: conda env create -f environment.yml
+# Activate with: conda activate retinadetachnet
+
+name: retinadetachnet
+channels:
+  - conda-forge
+  - pytorch
+  - defaults
+
+dependencies:
+  # Python version
+  - python=3.10
+
+  # Core scientific stack (conda)
+  - numpy>=1.24,<2.0
+  - pandas>=2.0
+  - scipy>=1.10
+  - scikit-image>=0.21
+  - matplotlib>=3.7
+  - tifffile>=2023.7
+
+  # PyTorch (conda - handles GPU/MPS correctly)
+  - pytorch>=2.0
+  - torchvision
+
+  # Pip-only packages
+  - pip
+  - pip:
+    # Deep Learning - StarDist
+    - stardist>=0.8.5
+    - csbdeep>=0.7.4
+
+    # Deep Learning - U-Net
+    - segmentation-models-pytorch>=0.3.3
+
+    # GUI
+    - customtkinter>=5.2.0
+
+    # TensorFlow (required by StarDist)
+    # Note: On Apple Silicon, tensorflow-macos is auto-selected
+    - tensorflow>=2.10
