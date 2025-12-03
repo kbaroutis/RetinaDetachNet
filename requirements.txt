@@ -1,0 +1,24 @@
+# RetinaDetachNet Dependencies
+# Deep Learning - StarDist & TensorFlow
+stardist>=0.8.5
+csbdeep>=0.7.4
+tensorflow>=2.10
+
+# Deep Learning - PyTorch & U-Net (for ONL segmentation)
+torch>=2.0
+segmentation-models-pytorch>=0.3.3
+
+# Image Processing
+scikit-image>=0.21
+scipy>=1.10
+tifffile>=2023.7
+
+# Numerical & Data
+numpy>=1.24
+pandas>=2.0
+
+# GUI
+customtkinter>=5.2.0
+
+# Visualization
+matplotlib>=3.7
