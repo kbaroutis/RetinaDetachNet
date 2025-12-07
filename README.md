@@ -165,11 +165,20 @@ If you use RetinaDetachNet in your research, please cite:
 [Citation pending publication]
 ```
 
+This software uses StarDist for cell segmentation. Please also cite:
+
+```
+Schmidt, U., Weigert, M., Broaddus, C., & Myers, G. (2018).
+Cell Detection with Star-Convex Polygons.
+Medical Image Computing and Computer Assisted Intervention – MICCAI 2018.
+https://doi.org/10.1007/978-3-030-00934-2_30
+```
+
 ---
 
 ## License
 
-[License information to be added]
+This project is licensed under the BSD 3-Clause License - see the [LICENSE](LICENSE) file for details.
 
 ---
 

@@ -7,10 +7,10 @@ A deep learning-based tool for quantifying apoptotic cells (TUNEL+) and nuclei d
 in retinal detachment immunohistochemistry images using StarDist segmentation and
 U-Net-based ONL segmentation.
 
-Version: 2.0.0
+Version: 1.0.0
 
 Distribution: Standalone Python GUI Application
-Repository: https://github.com/[your-repo]/RetinaDetachNet
+Repository: https://github.com/kbaroutis/RetinaDetachNet
 """
 
 # Suppress TensorFlow and StarDist warnings/popups
@@ -42,7 +42,7 @@ from tkinter import filedialog, messagebox
 import torch
 import segmentation_models_pytorch as smp
 
-__version__ = "2.0.0"
+__version__ = "1.0.0"
 __app_name__ = "RetinaDetachNet"
 
 # ONL U-Net Model Path - Relative to script location
