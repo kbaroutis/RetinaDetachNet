@@ -49,6 +49,7 @@ __app_name__ = "RetinaDetachNet"
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 ONL_MODEL_DIR = os.path.join(SCRIPT_DIR, "models")
 ONL_THRESHOLD = 0.5  # Optimal threshold based on training validation metrics
+ROLLING_BALL_RADIUS_UM = 6.5  # Rolling ball radius in micrometers for background subtraction
 
 
 def load_onl_model(model_dir, device):
@@ -326,6 +327,7 @@ class RetinaDetachNetApp(ctk.CTk):
     def worker(self):
         try:
             um2_px = (1 / self.pixels_per_um_var.get()) ** 2
+            rolling_ball_radius_px = max(1, round(ROLLING_BALL_RADIUS_UM * self.pixels_per_um_var.get()))
             nuc_files = sorted(glob.glob(os.path.join(self.nuclei_dir_var.get(), '*.tif')))
             tun_files = sorted(glob.glob(os.path.join(self.tunel_dir_var.get(), '*.tif')))
 
@@ -388,7 +390,7 @@ class RetinaDetachNetApp(ctk.CTk):
                     continue
 
                 # Process nuclei
-                bg2 = rolling_ball(img, radius=20)
+                bg2 = rolling_ball(img, radius=rolling_ball_radius_px)
                 sub2 = np.clip(img - bg2, 0, None)
                 m2 = np.zeros_like(sub2)
                 m2[roi] = sub2[roi]
@@ -407,7 +409,7 @@ class RetinaDetachNetApp(ctk.CTk):
 
                 # TUNEL processing
                 timg = tiff.imread(tf).astype(np.float32)
-                bg = rolling_ball(timg, radius=20)
+                bg = rolling_ball(timg, radius=rolling_ball_radius_px)
                 sub = np.clip(timg - bg, 0, None)
                 sub_m = np.zeros_like(sub)
                 sub_m[roi] = sub[roi]
