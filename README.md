@@ -162,16 +162,20 @@ Check that:
 If you use RetinaDetachNet in your research, please cite:
 
 ```
-[Citation pending publication]
+Baroutis KG, El Helwe H, Yamamoto K, Bantounou MA, Chatziralli I,
+Georgalas I, Theodossiadis P, Murakami Y, Miller JW, Vavvas DG.
+RetinaDetachNet: Automated deep learning quantification of photoreceptor
+cell death for neuroprotection studies in experimental retinal detachment.
+Transl Vis Sci Technol. 2026;0(0):9518.
+https://doi.org/10.1167/tvst.0.0.9518
 ```
 
 This software uses StarDist for cell segmentation. Please also cite:
 
 ```
-Schmidt, U., Weigert, M., Broaddus, C., & Myers, G. (2018).
-Cell Detection with Star-Convex Polygons.
-Medical Image Computing and Computer Assisted Intervention – MICCAI 2018.
-https://doi.org/10.1007/978-3-030-00934-2_30
+Schmidt U, Weigert M, Broaddus C, Myers G. Cell Detection with
+Star-Convex Polygons. Medical Image Computing and Computer Assisted
+Intervention - MICCAI 2018. https://doi.org/10.1007/978-3-030-00934-2_30
 ```
 
 ---
