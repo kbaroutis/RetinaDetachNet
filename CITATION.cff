@@ -1,0 +1,60 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "RetinaDetachNet: Automated Deep Learning Quantification of Photoreceptor Cell Death for Neuroprotection Studies in Experimental Retinal Detachment"
+type: software
+version: 1.0.0
+license: BSD-3-Clause
+repository-code: "https://github.com/kbaroutis/RetinaDetachNet"
+doi: "10.1167/tvst.15.4.23"
+date-released: "2026-04-14"
+authors:
+  - family-names: Baroutis
+    given-names: Konstantinos G.
+  - family-names: El Helwe
+    given-names: Hadi
+  - family-names: Yamamoto
+    given-names: Kohta
+  - family-names: Bantounou
+    given-names: Maria Angeliki
+  - family-names: Chatziralli
+    given-names: Irini
+  - family-names: Georgalas
+    given-names: Ilias
+  - family-names: Theodossiadis
+    given-names: Panagiotis
+  - family-names: Murakami
+    given-names: Yusuke
+  - family-names: Miller
+    given-names: Joan W.
+  - family-names: Vavvas
+    given-names: Demetrios G.
+preferred-citation:
+  type: article
+  title: "RetinaDetachNet: Automated Deep Learning Quantification of Photoreceptor Cell Death for Neuroprotection Studies in Experimental Retinal Detachment"
+  doi: "10.1167/tvst.15.4.23"
+  journal: "Translational Vision Science & Technology"
+  volume: 15
+  issue: 4
+  start: 23
+  year: 2026
+  authors:
+    - family-names: Baroutis
+      given-names: Konstantinos G.
+    - family-names: El Helwe
+      given-names: Hadi
+    - family-names: Yamamoto
+      given-names: Kohta
+    - family-names: Bantounou
+      given-names: Maria Angeliki
+    - family-names: Chatziralli
+      given-names: Irini
+    - family-names: Georgalas
+      given-names: Ilias
+    - family-names: Theodossiadis
+      given-names: Panagiotis
+    - family-names: Murakami
+      given-names: Yusuke
+    - family-names: Miller
+      given-names: Joan W.
+    - family-names: Vavvas
+      given-names: Demetrios G.
