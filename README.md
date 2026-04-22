@@ -166,8 +166,8 @@ Baroutis KG, El Helwe H, Yamamoto K, Bantounou MA, Chatziralli I,
 Georgalas I, Theodossiadis P, Murakami Y, Miller JW, Vavvas DG.
 RetinaDetachNet: Automated deep learning quantification of photoreceptor
 cell death for neuroprotection studies in experimental retinal detachment.
-Transl Vis Sci Technol. 2026;0(0):9518.
-https://doi.org/10.1167/tvst.0.0.9518
+Transl Vis Sci Technol. 2026;15(4):23.
+https://doi.org/10.1167/tvst.15.4.23
 ```
 
 This software uses StarDist for cell segmentation. Please also cite:
