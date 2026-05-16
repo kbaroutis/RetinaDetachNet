@@ -2,6 +2,14 @@
 
 **Automated TUNEL and Nuclei Quantification for Retinal Detachment Analysis**
 
+<div align="center">
+
+https://github.com/user-attachments/assets/35930e5a-b515-4be3-9684-db9857ff2257
+
+*35-second demo*
+
+</div>
+
 A deep learning-based tool for quantifying apoptotic cells (TUNEL+) and nuclei density in retinal detachment immunohistochemistry images using StarDist segmentation and U-Net-based ONL (Outer Nuclear Layer) segmentation.
 
 ---
