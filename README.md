@@ -10,7 +10,7 @@ https://github.com/user-attachments/assets/f194770b-1d8f-4a39-b49f-027aac73b086
 
 </div>
 
-A deep learning-based tool for quantifying apoptotic cells (TUNEL+) and nuclei density in retinal detachment immunohistochemistry images using StarDist segmentation and U-Net-based ONL (Outer Nuclear Layer) segmentation.
+A deep learning-based tool for quantifying dying cells (TUNEL+) and nuclei density in retinal detachment immunohistochemistry images using StarDist segmentation and U-Net-based ONL (Outer Nuclear Layer) segmentation.
 
 ---
 
