@@ -4,7 +4,7 @@
 
 <div align="center">
 
-https://github.com/user-attachments/assets/f194770b-1d8f-4a39-b49f-027aac73b086
+https://github.com/user-attachments/assets/e2d75d25-dd90-4ac3-9bd3-42842651e68f
 
 *35-second demo*
 
